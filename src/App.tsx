@@ -1,8 +1,16 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Login } from './pages/Login';
+import { SignUp } from './pages/SignUp';
 
 const App = () => {
   return (
-    <h1>Movies</h1>
+    <BrowserRouter>
+      <Switch>
+        <Route path='/signup' component={SignUp} />
+        <Route path='/' component={Login} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
